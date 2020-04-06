@@ -1,34 +1,8 @@
-const http = require('http');
+const app = require('./src/config/express-custom.js')
 
-const servidor = http.createServer(function (req, resp) {
+var PORT = process.env.PORT || 3000
+var HOST = "0.0.0.0"
 
-    let html = '';
-    if (req.url == '/') {
-        html = `
-            <html>
-                <head>
-                    <meta charset="utf-8">
-                </head>
-                <body>
-                    <h1> Casa do Código </h1>
-                </body>
-            </html>
-        `;
-    } else if (req.url == '/livros') {
-        html = `
-            <html>
-                <head>
-                    <meta charset="utf-8">
-                </head>
-                <body>
-                    <h1> Listagem de livros </h1>
-                </body>
-            </html>
-        `;
-    }
-
-    // outros else-if
-
-    resp.end(html);
+app.listen(3000, function () {
+    console.log(`Servidor ${HOST} rodando na porta ${PORT}`)
 });
-servidor.listen(3000);
