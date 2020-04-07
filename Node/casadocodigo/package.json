@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Gabriel Leite",
+  "author": "Lucas Kroth",
   "license": "ISC",
   "dependencies": {
-    "express": "4.16.3"
+    "express": "4.16.3",
+    "marko": "^4.19.10"
   }
 }
